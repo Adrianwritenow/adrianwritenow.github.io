@@ -1,0 +1,875 @@
+$redColor: rgba(244,67,54,1);
+$blueColor: rgba(33,150,243,1);
+
+html{
+  display: flex;
+  justify-content: center;
+}
+body{
+  max-width: 1440px;
+}
+
+%fixedbox {
+  // Basic styling
+  display: block;
+  font-size: 3vw;
+  padding: 1em;
+  // Center box in middle of screen
+  position: fixed;
+  transform: translate3d(-50%,-50%,0);
+}
+
+section {
+  // Background image styling
+  background-repeat: no-repeat;
+  background-size: cover;
+  // Reset stacking context
+  // isolation: isolate;
+  // Must be set to correctly position .wrapper below
+  position: relative;
+  // Height not required. Can be left as auto
+  height: 90vh;
+
+  .content {
+    @extend %fixedbox;
+    z-index: 1000;
+    width: 1000px;
+  }
+
+  .contentHeader {
+    @extend %fixedbox;
+    top: 0;
+    z-index: 1000;
+
+    h1 {
+      font-size: 10vw;
+    }
+  }
+}
+
+.wrapper {
+  // Hides box (&:before) outside of section
+  clip: rect(auto auto auto auto);
+  // Clip works only on positions absolute or fixed
+  position: absolute;
+  // Stretch to fill entire section
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  &:before {
+    // Basic styling
+    @extend %fixedbox;
+    padding: 2em 3.5em;
+    // Blend with background
+    mix-blend-mode: darken;
+  }
+
+  .content {
+    top: 40vw;
+    background-color: white;
+    width: 60vw;
+    left: 40vw;
+  }
+}
+
+.fa-4x {
+  font-size: 3em;
+  margin-right: 10px;
+}
+
+.flex-center {
+  position: fixed;
+  bottom: 0;
+  min-height: 10%;
+  width: 100%;
+  z-index: 2000;
+  max-width: 1440px;
+  background: #000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.icon-3d {
+  padding: 10px;
+  -webkit-animation: icon3d 200ms 10;
+  animation: icon3d 200ms 10;
+  color: #fff;
+
+  &:hover {
+    -webkit-animation: icon3d 200ms infinite;
+    animation: icon3d 200ms infinite;
+  }
+}
+@keyframes icon3d {
+  0% {
+    text-shadow: 5px 4px $redColor, -5px -6px $blueColor;
+  }
+
+  25% {
+    text-shadow: -5px -6px $redColor, 5px 4px $blueColor;
+  }
+
+  50% {
+    text-shadow: 5px -4px $redColor, -8px 4px $blueColor;
+  }
+
+  75% {
+    text-shadow: -8px -4px $redColor, -5px -4px $blueColor;
+  }
+
+  100% {
+    text-shadow: -5px 0 $redColor, 5px -4px $blueColor;
+  }
+}
+/////BUTTON/////
+.linethru {
+  display: inline-block;
+  position: fixed;
+
+  &:after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 0.5em;
+    background-color: #299973;
+    display: block;
+    bottom: 0.25em;
+    z-index: -1;
+    transform-origin: center left;
+    animation: strikethrough 1s 0.5s cubic-bezier(.55, 0, .1, 1) 1;
+    transition: transform 0.5s cubic-bezier(.55, 0, .1, 1);
+  }
+}
+
+.experienceWrapper {
+  overflow: hidden;
+  h1 {
+    font-family: Anton;
+    color: #FBFDFD;
+    font-size: 100%;
+    clip: rect(auto auto auto auto);
+    position: absolute;
+  }
+
+  .zero {
+    display: flex;
+    justify-content: center;
+    background-image: url('https://rtl.lwcdn.nl/imageScaled/?site=ehet2017&file=1481799675_beton.jpg&w=1200&h=800');
+  }
+
+  .one {
+    overflow: hidden;
+    // Section background image
+    background-image: url('https://rtl.lwcdn.nl/imageScaled/?site=ehet2017&file=1481799675_beton.jpg&w=1200&h=800');
+
+    .wrapper {
+      // Box background color
+      border: 5vw solid #F3402F;
+      background-color: #81B8AF;
+      opacity: 0.85;
+    }
+
+    .linethru:after {
+      background-color: yellow;
+      opacity: 0.25;
+    }
+
+    .content {
+      z-index: 1000;
+    }
+
+    #flower0B {
+      @extend #flower0A;
+      top: 2%;
+      transform: rotate(235deg)!important;
+      z-index: 2000;
+    }
+
+    #flower1B {
+      @extend #flower1A;
+      top: 2%;
+    }
+
+    #flower2B {
+      @extend #flower2A;
+      z-index: 2000;
+    }
+
+    #flower3B {
+      @extend #flower3A;
+      z-index: 2000;
+    }
+  }
+
+  .two {
+    background-image: url('https://rtl.lwcdn.nl/imageScaled/?site=ehet2017&file=1481799675_beton.jpg&w=1200&h=800');
+    overflow: hidden;
+
+    #flower0C {
+      @extend #flower0A;
+      top: 2%;
+      transform: rotate(235deg)!important;
+      z-index: 1000;
+    }
+
+    #flower1C {
+      @extend #flower1A;
+      top: 2%;
+    }
+
+    #flower2C {
+      @extend #flower2A;
+      z-index: 2000;
+    }
+
+    #flower3C {
+      @extend #flower3A;
+      z-index: 2000;
+    }
+
+    .wrapper:before {
+      background: #faaa54;
+      // mix-blend-mode: difference;
+    }
+
+    #video-background {
+      /*  making the video fullscreen  */
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+    }
+
+    .linethru:after {
+      background-color: purple;
+      opacity: 0.25;
+    }
+
+    .wrapper {
+      background-color: #FFD2B3;
+      opacity: 0.85;
+      border: 5vw solid #2AB7CA;
+    }
+
+    .container {
+      top: 12vw;
+    }
+
+    .button {
+      z-index: 1000;
+    }
+  }
+
+  .three {
+    border: 5vw solid #5C1A1B;
+    border-bottom: 10vw solid #5C1A1B;
+    background-image: url('https://rtl.lwcdn.nl/imageScaled/?site=ehet2017&file=1481799675_beton.jpg');
+    height: 92vh;
+
+    .linethru:after {
+      background-color: blue;
+      opacity: 0.25;
+    }
+
+    .wrapper:before {
+      background: #6c320a;
+      mix-blend-mode: darken;
+    }
+
+    #flower0D {
+      @extend #flower0A;
+      top: 2%;
+      transform: rotate(235deg)!important;
+      z-index: 1000;
+    }
+
+    #flower1D {
+      @extend #flower1A;
+      top: 2%;
+    }
+
+    #flower2D {
+      @extend #flower2A;
+    }
+
+    #flower3D {
+      @extend #flower3A;
+    }
+
+    .wrapper {
+      background-color: #AED4E6;
+      opacity: 0.85;
+    }
+
+    .container {
+      top: 20vh;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    font-family: sans-serif;
+  }
+}
+
+.linethru--rev {
+  font-family: Anton;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #EEFAD1;
+  font-weight: normal;
+  position: relative;
+  z-index: 1000;
+
+  &:after {
+    transform: scaleX(0);
+    transform-origin: center left;
+  }
+
+  &:hover {
+    color: #EEFAD1;
+  }
+
+  &:hover:after {
+    transform: scaleX(1);
+    transform-origin: center left;
+  }
+}
+@keyframes strikethrough {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+/////////////////////SPLASH///////////////
+.flowerContainer{
+  width: 100vw;
+  max-width: 1440px;
+  position: fixed;
+  height: 100vh;
+  max-height: 1269px;
+  overflow: hidden;
+}
+
+#flower0A {
+  width: 20vh;
+  overflow: auto;
+  transform: rotate(220deg);
+  left: 75%;
+  top: 0;
+  margin-right: -25%;
+  margin-top: -7%;
+  position: relative;
+}
+
+#flower1A {
+  @extend #flower0A;
+  transform: rotate(140deg);
+  left: -5%;
+  top: 0;
+  margin-left: -5%;
+  margin-top: -7%;
+
+}
+
+#flower2A {
+  @extend #flower0A;
+  top: 85%;
+  transform: rotate(35deg);
+  left: -5%;
+  margin-bottom: -5%;
+  margin-left: -5%;
+
+}
+
+#flower3A {
+  @extend #flower0A;
+  top: 85%;
+  transform: rotate(320deg);
+  margin-bottom: -5%;
+}
+
+.backgroundSplash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  background-image: url('https://rtl.lwcdn.nl/imageScaled/?site=ehet2017&file=1481799675_beton.jpg');
+  opacity: 1.30;
+  margin-top: 25vh;
+}
+
+.backgroundImage {
+  opacity: 0.85;
+  background-color: #FBD2D7;
+}
+
+#tiger {
+  position: absolute;
+  width: 60vw;
+  height: auto;
+}
+
+#flamingo {
+  @extend #tiger;
+  width: 200vw;
+  top: -5vw;
+}
+
+#parrot {
+  width: 50vw;
+}
+
+.container {
+  position: absolute;
+}
+
+#tiger,
+.filter {
+  filter: url(#glitch);
+}
+
+#water {
+  width: 92vw;
+  height: 20vh;
+  object-fit: cover;
+  border: 4vw solid #C00C16;
+}
+
+.tigerWrap {
+  display: inline-block;
+}
+
+.splashWrapper {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+.splashButtons {
+  @extend .splashWrapper;
+  top: 14.5vw;
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    font-size: 5vw;
+    text-decoration: none;
+  }
+}
+
+button {
+  text-align: center;
+}
+
+.splashHeader {
+  .header {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+
+    h1,
+    h4 {
+      font-size: 8vw;
+      color: yellow;
+      text-shadow: 3px 5px black;
+      font-family: sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    h1 {
+      top: -10vw;
+    }
+
+    h4 {
+      font-size: 5vw;
+    }
+  }
+}
+///////////////////SKILLCARDS/////////////
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 60vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 80vh;
+  width: 90vw;
+}
+
+.button {
+  padding: 2vh;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  width: 20vw;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+
+  &:after {
+    position: absolute;
+    transition: 0.3s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background: #f7f7f7;
+  }
+
+  &:hover {
+    cursor: pointer;
+    filter: grayscale(0%);
+
+    &:after {
+      width: 100%;
+      left: 0;
+    }
+
+    &.button {
+      transform: scale(3);
+    }
+
+    &.button:after {
+      width: 0;
+    }
+  }
+
+  img {
+    width: 60%;
+  }
+}
+///////////EXPERIENCE CARDS//////////
+
+.experienceWrapper .three .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  left: 20vw;
+  top: 20vh;
+}
+
+.flip {
+  position: relative;
+  width: 40vw;
+  height: 33vh;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  z-index: 2000;
+}
+
+.flip:hover {
+  transform: rotateY(180deg);
+  transition: transform 1s;
+}
+
+.front {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 10vw;
+  width: 100%;
+  height: 50%;
+  backface-visibility: hidden;
+
+  img {
+    width: 40vw;
+  }
+}
+
+.back {
+  position: absolute;
+  top: 10vw;
+  left: -31vw;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  width: 80vw;
+  background-color: white;
+  opacity: 0.75;
+  text-align: center;
+  box-shadow: 1px 1px 5px black;
+  padding: 10px;
+  justify-content: center;
+  font-size: 4vw;
+  padding-bottom: 0px;
+}
+
+#experience > div > div > div > div:nth-child(3) > div.back {
+  top: -30vw;
+}
+
+#experience > div > div > div > div:nth-child(2) > div.back {
+  top: -15vw;
+}
+///////BREAKPOINT/////
+@media (max-width:425px) {
+  #flamingo {
+    left: -35vw;
+  }
+  .splashButtons{
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 30vw;
+    top: 40vw;
+  }
+
+  .linethru--rev {
+
+    color: #AF5F70;
+
+
+
+  }
+    .linethru:after {
+      background-color: #C297A1;
+    }
+  }
+@media (min-width:768px) {
+  #splash {
+    #tiger {
+      width: 30vw;
+    }
+
+    h1 {
+      font-size: 5vw;
+      top: -6vw;
+    }
+
+    h4 {
+      font-size: 3vw;
+    }
+  }
+
+  .two {
+    .container {
+       top: 16vw;
+       left: 0vw;
+       width: 90vw;
+    }
+    .button  {
+      padding-top: 1vw;
+      padding-left: 7vw;
+      width: 6vw;
+        img{
+          width: 7vw;
+
+        }
+      }
+    }
+  .three {
+    .flip {
+      width: 20vw;
+    }
+    .front{
+      z-index: 1000;
+      top: -2vw;
+    }
+
+    .back{
+      font-size: 2vw;
+      width: 40vw;
+      z-index: 2000;
+    }
+    div:nth-child(3) > div.front {
+      top: 10vh;
+      z-index: 0;
+    }
+    .container{
+      width: 80vw;
+      justify-content: space-between;
+      left: 7vw;
+    }
+  }
+
+  #experience > div > div > div > div:nth-child(1){
+    z-index: 2000;
+  }
+  #experience > div > div > div > div:nth-child(2){
+    z-index: 1000;
+  }
+  #experience > div > div > div > div:nth-child(3){
+    z-index: 2000;
+  }
+  #experience > div > div > div > div:nth-child(3) > div.back {
+    left: -4vw;
+    top: -2vw;
+
+  }
+  #experience > div > div > div > div:nth-child(3) > div.front{
+    left: 8vw;
+  }
+  #experience > div > div > div > div:nth-child(2) > div.front{
+    left: 3vw;
+  }
+
+  #experience > div > div > div > div:nth-child(1) > div.front{
+    left: -3vw;
+  }
+
+
+  #experience > div > div > div > div:nth-child(2) > div.back {
+    top: -2vw;
+    width: 40vw;
+
+  }
+  #experience > div > div > div > div:nth-child(1) > div.back {
+    top: -2vw;
+    left: -22vw;
+  }
+
+  #experience{
+    height: 82vh;
+  }
+  #skills {
+     .wrapper{
+    border:3vw solid #2AB7CA;
+  }
+  }
+  #experience{
+    border: 3vw solid #5C1A1B;
+    border-bottom: 9vw solid #5C1A1B;
+  }
+  #about > .wrapper{
+    border: 3vw solid #F3402F;
+
+  }
+
+  .splashButtons{
+    left: -4vw;
+    top: 14.8vw;
+
+
+    a{
+      font-size: 3vw;
+      margin-left: 8.5vw;
+    }
+  }
+  #splash > div > div > div.splashWrapper > div.splashButtons > a:nth-child(2){
+    margin-right: 8vw;
+      margin-left: 5vw;
+  }
+  #splash > div > div > div.splashWrapper > div.splashButtons > a:nth-child(3){
+    margin-left: 18vw;
+  }
+  #splash > div > div > div.splashWrapper > div.splashButtons > a:nth-child(4){
+        margin-left: 5vw;
+  }
+
+
+
+}
+@media (max-width:1024px) {
+  .splashButtons a{
+    top: -2vw;
+  }
+
+
+}
+@media (min-width:1024px) {
+
+  #flower0A,#flower1A,#flower2A,#flower3A,#flower0B,#flower1B,
+  #flower2B,#flower3B,#flower0C,#flower2C,#flower3C,#flower0D,
+  #flower1D,#flower2D,#flower3D{
+    width: 30vh;
+
+  }
+
+  #flamingo{
+    width: 100vw;
+    left: 20vw;
+
+  }
+  #about .content{
+    font-size: 2vw;
+    top: 25vw;
+  }
+
+  section .contentHeader{
+    top: -6vw;
+  }
+
+  #water{
+    border: 2.5vw solid #C00C16;
+    width:97vw;
+  }
+
+  .splashButtons{
+    top: 14.3vw;
+    left: 2vw;
+    a{
+      font-size: 2.2vw;
+    }
+  }
+  .experienceWrapper .two .container{
+    top: 17vw;
+
+    .button img{
+      width: 6vw;
+    }
+  }
+
+}
+@media (min-width:1025px) {
+  .splashButtons{
+    top: 11.7vw;
+    left: 3vw;
+    a{
+      font-size: 2.2vw;
+    }
+  }
+}
+@media (min-width:1440px) {
+  .splashButtons{
+    top: 11.2vw;
+  }
+
+  .experienceWrapper .two .container{
+    left: 5vw;
+
+    .button{
+        padding-top: 0vw;
+        padding-left: 6vw;
+       img{
+         width: 5vw;
+       }
+    }
+  }
+
+}
+@media (max-width:768px){
+  .splashButtons a{
+    top: 0vw;
+    margin-bottom: 2vw;
+
+  }
+
+}

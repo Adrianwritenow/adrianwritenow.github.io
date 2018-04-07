@@ -1,0 +1,516 @@
+section .content, section .contentHeader, .wrapper:before {
+  display: block;
+  font-size: 3vw;
+  padding: 1em;
+  position: fixed;
+  transform: translate3d(-50%, -50%, 0); }
+
+section {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 90vh; }
+  section .content {
+    z-index: 1000;
+    width: 1000px; }
+  section .contentHeader {
+    top: 0;
+    z-index: 1000; }
+    section .contentHeader h1 {
+      font-size: 10vw; }
+
+.wrapper {
+  clip: rect(auto auto auto auto);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+  .wrapper:before {
+    padding: 2em 3.5em;
+    mix-blend-mode: darken; }
+  .wrapper .content {
+    top: 40vw;
+    background-color: white;
+    width: 60vw;
+    left: 40vw; }
+
+.fa-4x {
+  font-size: 3em;
+  margin-right: 10px; }
+
+.flex-center {
+  position: fixed;
+  bottom: 0;
+  min-height: 10%;
+  width: 100%;
+  z-index: 2000;
+  background: #000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.icon-3d {
+  padding: 10px;
+  -webkit-animation: icon3d 200ms 10;
+  animation: icon3d 200ms 10;
+  color: #fff; }
+  .icon-3d:hover {
+    -webkit-animation: icon3d 200ms infinite;
+    animation: icon3d 200ms infinite; }
+
+@keyframes icon3d {
+  0% {
+    text-shadow: 5px 4px #f44336, -5px -6px #2196f3; }
+  25% {
+    text-shadow: -5px -6px #f44336, 5px 4px #2196f3; }
+  50% {
+    text-shadow: 5px -4px #f44336, -8px 4px #2196f3; }
+  75% {
+    text-shadow: -8px -4px #f44336, -5px -4px #2196f3; }
+  100% {
+    text-shadow: -5px 0 #f44336, 5px -4px #2196f3; } }
+
+.linethru {
+  display: inline-block;
+  position: fixed; }
+  .linethru:after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 0.5em;
+    background-color: #299973;
+    display: block;
+    bottom: 0.25em;
+    z-index: -1;
+    transform-origin: center left;
+    animation: strikethrough 1s 0.5s cubic-bezier(0.55, 0, 0.1, 1) 1;
+    transition: transform 0.5s cubic-bezier(0.55, 0, 0.1, 1); }
+
+.experienceWrapper h1 {
+  font-family: Anton;
+  color: #FBFDFD;
+  font-size: 100%;
+  clip: rect(auto auto auto auto);
+  position: absolute; }
+
+.experienceWrapper .zero {
+  display: flex;
+  justify-content: center;
+  background-image: url("https://rtl.lwcdn.nl/imageScaled/?site=ehet2017&file=1481799675_beton.jpg&w=1200&h=800"); }
+
+.experienceWrapper .one {
+  overflow: hidden;
+  background-image: url("https://rtl.lwcdn.nl/imageScaled/?site=ehet2017&file=1481799675_beton.jpg&w=1200&h=800"); }
+  .experienceWrapper .one .wrapper {
+    border: 5vw solid #F3402F;
+    background-color: #81B8AF;
+    opacity: 0.85; }
+  .experienceWrapper .one .linethru:after {
+    background-color: yellow;
+    opacity: 0.25; }
+  .experienceWrapper .one .content {
+    z-index: 1000; }
+  .experienceWrapper .one #flower0B {
+    top: 2%;
+    transform: rotate(235deg) !important;
+    z-index: 2000; }
+  .experienceWrapper .one #flower1B {
+    top: 2%; }
+  .experienceWrapper .one #flower2B {
+    z-index: 2000; }
+  .experienceWrapper .one #flower3B {
+    z-index: 2000; }
+
+.experienceWrapper .two {
+  background-image: url("https://rtl.lwcdn.nl/imageScaled/?site=ehet2017&file=1481799675_beton.jpg&w=1200&h=800");
+  overflow: hidden; }
+  .experienceWrapper .two #flower0C {
+    top: 2%;
+    transform: rotate(235deg) !important;
+    z-index: 1000; }
+  .experienceWrapper .two #flower1C {
+    top: 2%; }
+  .experienceWrapper .two #flower2C {
+    z-index: 2000; }
+  .experienceWrapper .two #flower3C {
+    z-index: 2000; }
+  .experienceWrapper .two .wrapper:before {
+    background: #faaa54; }
+  .experienceWrapper .two #video-background {
+    /*  making the video fullscreen  */
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100; }
+  .experienceWrapper .two .linethru:after {
+    background-color: purple;
+    opacity: 0.25; }
+  .experienceWrapper .two .wrapper {
+    background-color: #FFD2B3;
+    opacity: 0.85;
+    border: 5vw solid #2AB7CA; }
+  .experienceWrapper .two .container {
+    top: 12vw; }
+  .experienceWrapper .two .button {
+    z-index: 1000; }
+
+.experienceWrapper .three {
+  border: 5vw solid #5C1A1B;
+  border-bottom: 10vw solid #5C1A1B;
+  background-image: url("https://rtl.lwcdn.nl/imageScaled/?site=ehet2017&file=1481799675_beton.jpg");
+  height: 92vh; }
+  .experienceWrapper .three .linethru:after {
+    background-color: blue;
+    opacity: 0.25; }
+  .experienceWrapper .three .wrapper:before {
+    background: #6c320a;
+    mix-blend-mode: darken; }
+  .experienceWrapper .three #flower0D {
+    top: 2%;
+    transform: rotate(235deg) !important;
+    z-index: 1000; }
+  .experienceWrapper .three #flower1D {
+    top: 2%; }
+  .experienceWrapper .three #flower2D {
+    z-index: 2000; }
+  .experienceWrapper .three #flower3D {
+    z-index: 2000; }
+  .experienceWrapper .three .wrapper {
+    background-color: #AED4E6;
+    opacity: 0.85; }
+  .experienceWrapper .three .container {
+    top: 20vh; }
+
+.experienceWrapper p {
+  font-weight: 400;
+  font-family: sans-serif; }
+
+.linethru--rev {
+  font-family: Anton;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #EEFAD1;
+  font-weight: normal;
+  position: relative;
+  z-index: 1000; }
+  .linethru--rev:after {
+    transform: scaleX(0);
+    transform-origin: center left; }
+  .linethru--rev:hover {
+    color: #EEFAD1; }
+  .linethru--rev:hover:after {
+    transform: scaleX(1);
+    transform-origin: center left; }
+
+@keyframes strikethrough {
+  from {
+    transform: scaleX(0); }
+  to {
+    transform: scaleX(1); } }
+
+#flower0A, .experienceWrapper .one #flower0B, .experienceWrapper .two #flower0C, .experienceWrapper .three #flower0D, #flower1A, .experienceWrapper .one #flower1B, .experienceWrapper .two #flower1C, .experienceWrapper .three #flower1D, #flower2A, .experienceWrapper .one #flower2B, .experienceWrapper .two #flower2C, .experienceWrapper .three #flower2D, #flower3A, .experienceWrapper .one #flower3B, .experienceWrapper .two #flower3C, .experienceWrapper .three #flower3D {
+  width: 20vh;
+  overflow: auto;
+  transform: rotate(205deg);
+  position: fixed;
+  right: 0;
+  margin-right: -30px;
+  margin-top: -30px; }
+
+#flower1A, .experienceWrapper .one #flower1B, .experienceWrapper .two #flower1C, .experienceWrapper .three #flower1D, #flower2A, .experienceWrapper .one #flower2B, .experienceWrapper .two #flower2C, .experienceWrapper .three #flower2D {
+  transform: rotate(140deg);
+  left: 0;
+  margin-left: -30px; }
+
+#flower2A, .experienceWrapper .one #flower2B, .experienceWrapper .two #flower2C, .experienceWrapper .three #flower2D {
+  bottom: 10%;
+  transform: rotate(40deg);
+  margin-bottom: -30px; }
+
+#flower3A, .experienceWrapper .one #flower3B, .experienceWrapper .two #flower3C, .experienceWrapper .three #flower3D {
+  bottom: 10%;
+  transform: rotate(320deg);
+  margin-bottom: -30px; }
+
+.backgroundSplash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-image: url("https://rtl.lwcdn.nl/imageScaled/?site=ehet2017&file=1481799675_beton.jpg");
+  opacity: 1.30;
+  margin-top: 25vh; }
+
+.backgroundImage {
+  opacity: 0.85;
+  background-color: #FBD2D7; }
+
+#tiger, #flamingo {
+  position: absolute;
+  width: 60vw;
+  height: auto; }
+
+#flamingo {
+  width: 200vw;
+  top: -5vw; }
+
+#parrot {
+  width: 50vw; }
+
+.container {
+  position: absolute; }
+
+#tiger, #flamingo,
+.filter {
+  filter: url(#glitch); }
+
+#water {
+  width: 92vw;
+  height: 20vh;
+  object-fit: cover;
+  border: 4vw solid #C00C16; }
+
+.tigerWrap {
+  display: inline-block; }
+
+.splashWrapper, .splashButtons {
+  display: flex;
+  justify-content: center;
+  position: absolute; }
+
+.splashButtons {
+  top: 14.5vw;
+  display: flex;
+  justify-content: space-between; }
+  .splashButtons a {
+    font-size: 5vw; }
+
+button {
+  text-align: center; }
+
+.splashHeader .header {
+  display: flex;
+  justify-content: center;
+  width: 100vw; }
+  .splashHeader .header h1,
+  .splashHeader .header h4 {
+    font-size: 8vw;
+    color: yellow;
+    text-shadow: 3px 5px black;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em; }
+  .splashHeader .header h1 {
+    top: -10vw; }
+  .splashHeader .header h4 {
+    font-size: 5vw; }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 60vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 80vh;
+  width: 90vw; }
+
+.button {
+  padding: 2vh;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  width: 20vw;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); }
+  .button:after {
+    position: absolute;
+    transition: 0.3s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background: #f7f7f7; }
+  .button:hover {
+    cursor: pointer;
+    filter: grayscale(0%); }
+    .button:hover:after {
+      width: 100%;
+      left: 0; }
+    .button:hover.button {
+      transform: scale(3); }
+    .button:hover.button:after {
+      width: 0; }
+  .button img {
+    width: 60%; }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.flip {
+  position: relative;
+  width: 200px;
+  height: 30vh;
+  transform-style: preserve-3d;
+  transition: transform 1s; }
+
+.flip:hover {
+  transform: rotateY(180deg);
+  transition: transform 1s; }
+
+.front {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; }
+  .front img {
+    width: 100%; }
+
+.back {
+  position: absolute;
+  top: 10vw;
+  left: -15vw;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  width: 80vw;
+  background-color: white;
+  opacity: 0.75;
+  text-align: center;
+  box-shadow: 1px 1px 5px black;
+  padding: 10px;
+  justify-content: center; }
+
+#experience > div > div > div > div:nth-child(3) > div.back {
+  top: -45vw; }
+
+#experience > div > div > div > div:nth-child(2) > div.back {
+  top: -10vw; }
+
+@media (max-width: 425px) {
+  #flamingo {
+    left: -35vw; }
+  .splashButtons {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 30vw;
+    top: 40vw; }
+  .linethru--rev {
+    color: #AF5F70; }
+  .linethru:after {
+    background-color: #C297A1; } }
+
+@media (min-width: 768px) {
+  #splash #tiger, #splash #flamingo {
+    width: 30vw; }
+  #splash h1 {
+    font-size: 5vw;
+    top: -6vw; }
+  #splash h4 {
+    font-size: 3vw; }
+  .two .container {
+    width: 90vw; }
+  .two .button {
+    width: 7vw;
+    padding: 1vh; }
+  .three .flip {
+    width: 20vw; }
+  .three .front {
+    z-index: 1000;
+    top: -2vw; }
+  .three .back {
+    font-size: 2vw;
+    width: 40vw;
+    z-index: 2000; }
+  .three div:nth-child(3) > div.front {
+    top: 10vh;
+    z-index: 0; }
+  .three .container {
+    width: 80vw;
+    justify-content: space-between;
+    left: 7vw; }
+  #experience > div > div > div > div:nth-child(1) {
+    z-index: 2000; }
+  #experience > div > div > div > div:nth-child(2) {
+    z-index: 1000; }
+  #experience > div > div > div > div:nth-child(3) {
+    z-index: 2000; }
+  #experience > div > div > div > div:nth-child(3) > div.back {
+    left: -4vw;
+    top: -2vw; }
+  #experience > div > div > div > div:nth-child(3) > div.front {
+    left: 8vw; }
+  #experience > div > div > div > div:nth-child(2) > div.front {
+    left: 3vw; }
+  #experience > div > div > div > div:nth-child(1) > div.front {
+    left: -3vw; }
+  #experience > div > div > div > div:nth-child(2) > div.back {
+    top: -2vw;
+    width: 40vw; }
+  #experience > div > div > div > div:nth-child(1) > div.back {
+    top: -2vw;
+    left: -22vw; }
+  #experience {
+    height: 82vh; }
+  #skills .wrapper {
+    border: 3vw solid #2AB7CA; }
+  #experience {
+    border: 3vw solid #5C1A1B;
+    border-bottom: 9vw solid #5C1A1B; }
+  #about > .wrapper {
+    border: 3vw solid #F3402F; }
+  .splashButtons {
+    left: -4vw; }
+    .splashButtons a {
+      font-size: 3vw;
+      margin-left: 8.5vw;
+      top: -3vw; }
+  #splash > div > div > div.splashWrapper > div.splashButtons > a:nth-child(2), #splash > div > div > div.splashButtons > div.splashButtons > a:nth-child(2) {
+    margin-right: 8vw;
+    margin-left: 5vw; }
+  #splash > div > div > div.splashWrapper > div.splashButtons > a:nth-child(3), #splash > div > div > div.splashButtons > div.splashButtons > a:nth-child(3) {
+    margin-left: 18vw; }
+  #splash > div > div > div.splashWrapper > div.splashButtons > a:nth-child(4), #splash > div > div > div.splashButtons > div.splashButtons > a:nth-child(4) {
+    margin-left: 5vw; } }
+
+@media (min-width: 1024px) {
+  #flamingo {
+    width: 300vw; }
+  #flower0A, .experienceWrapper .one #flower0B, .experienceWrapper .two #flower0C, .experienceWrapper .three #flower0D, #flower1A, .experienceWrapper .one #flower1B, .experienceWrapper .two #flower1C, .experienceWrapper .three #flower1D, #flower2A, .experienceWrapper .one #flower2B, .experienceWrapper .two #flower2C, .experienceWrapper .three #flower2D, #flower3A, .experienceWrapper .one #flower3B, .experienceWrapper .two #flower3C, .experienceWrapper .three #flower3D, #flower1A, .experienceWrapper .one #flower1B, .experienceWrapper .two #flower1C, .experienceWrapper .three #flower1D, #flower2A, .experienceWrapper .one #flower2B, .experienceWrapper .two #flower2C, .experienceWrapper .three #flower2D, #flower2A, .experienceWrapper .one #flower2B, .experienceWrapper .two #flower2C, .experienceWrapper .three #flower2D, #flower3A, .experienceWrapper .one #flower3B, .experienceWrapper .two #flower3C, .experienceWrapper .three #flower3D, #flower0B, #flower1B,
+  #flower2B, #flower3B, #flower0C, #flower2C, #flower3C, #flower0D,
+  #flower1D, #flower2D, #flower3D {
+    width: 30vh; } }
+
+@media (max-width: 1024px) {
+  .splashButtons a {
+    top: -2vw; } }
+
+@media (max-width: 768px) {
+  .splashButtons a {
+    top: 0vw;
+    margin-bottom: 2vw; } }
