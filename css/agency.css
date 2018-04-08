@@ -116,6 +116,7 @@ img::-moz-selection {
   color: #fff;
   font-family:Montserrat;
   font-weight: 600;
+  font-size: .75em;
 }
 
 #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
