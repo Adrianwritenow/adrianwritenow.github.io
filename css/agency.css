@@ -204,6 +204,7 @@ header.masthead {
   object-fit: cover;
   position: absolute;
   z-index: -2;
+  border: 3vw solid red;
 
 }
 
@@ -263,6 +264,11 @@ header.masthead .intro-text .intro-heading {
   }
   #tiger{
     width:30vw;
+  }
+
+  #water{
+    height: 13vw;
+    border: 2vw solid red;
   }
   .splashGraphic{
     height: 35vh;
