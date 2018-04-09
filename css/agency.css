@@ -187,14 +187,34 @@ header.masthead {
   padding-bottom: 20px;
   height: 100vh;
   opacity: .85;
-  background-image: url("../img/bg-tigercrop.png");
   background-size: 35vh;
   background-position: center;
 }
 
+.splashGraphic{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+#water{
+  width: 100vw;
+  height: 10vh;
+  object-fit: cover;
+  position: absolute;
+  z-index: -2;
+
+}
+
+#tiger{
+  z-index: -1;
+  width: 55vw;
+}
+
 header.masthead .intro-text {
-  padding-top: 150px;
-  padding-bottom: 100px;
+  padding-top: 50vw;
+
 
 }
 
@@ -210,9 +230,11 @@ header.masthead .intro-text .intro-heading {
   font-size: 50px;
   font-weight: 700;
   line-height: 50px;
-  margin-bottom: 15px;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color:#fed136;
+  z-index: 1;
+  position: absolute;
+
 }
 
 @media (min-width: 768px) {
@@ -221,8 +243,8 @@ header.masthead .intro-text .intro-heading {
     background-size: 50vh;
   }
   header.masthead .intro-text {
-    padding-top: 300px;
-    padding-bottom: 200px;
+    padding-top: 25%;
+    padding-bottom: 5vw;
   }
   header.masthead .intro-text .intro-lead-in {
     font-size: 40px;
@@ -238,6 +260,12 @@ header.masthead .intro-text .intro-heading {
     margin-bottom: 150px;
     color:#fed136;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  #tiger{
+    width:30vw;
+  }
+  .splashGraphic{
+    height: 35vh;
   }
 }
 
