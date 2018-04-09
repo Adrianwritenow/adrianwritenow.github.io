@@ -29,8 +29,9 @@ h6 {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-section {
-  padding: 100px 0;
+section#splash {
+  background-image: url("../img/bg-texture.jpeg");
+
 }
 
 section h2.section-heading {
@@ -50,7 +51,6 @@ section h3.section-subheading {
 
 @media (min-width: 768px) {
   section {
-    padding: 150px 0;
   }
 }
 
@@ -67,6 +67,8 @@ section h3.section-subheading {
 .btn-primary {
   background-color: #fed136;
   border-color: #fed136;
+  margin-bottom: 40px;
+
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
@@ -174,7 +176,7 @@ img::-moz-selection {
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url("../img/header-bg.jpg");
+  background-color:#FBD2D7;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -182,11 +184,18 @@ header.masthead {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  padding-bottom: 20px;
+  height: 100vh;
+  opacity: .85;
+  background-image: url("../img/bg-tigercrop.png");
+  background-size: 35vh;
+  background-position: center;
 }
 
 header.masthead .intro-text {
   padding-top: 150px;
   padding-bottom: 100px;
+
 }
 
 header.masthead .intro-text .intro-lead-in {
@@ -201,12 +210,16 @@ header.masthead .intro-text .intro-heading {
   font-size: 50px;
   font-weight: 700;
   line-height: 50px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color:#fed136;
 }
 
 @media (min-width: 768px) {
+
+  header.masthead{
+    background-size: 50vh;
+  }
   header.masthead .intro-text {
     padding-top: 300px;
     padding-bottom: 200px;
@@ -221,7 +234,7 @@ header.masthead .intro-text .intro-heading {
   header.masthead .intro-text .intro-heading {
     font-size: 75px;
     font-weight: 700;
-    line-height: 75px;
+    line-height: 25px;
     margin-bottom: 150px;
     color:#fed136;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
