@@ -49,10 +49,7 @@ section h3.section-subheading {
   font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-@media (min-width: 768px) {
-  section {
-  }
-}
+
 
 .btn {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -137,6 +134,8 @@ img::-moz-selection {
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
   color: #fed136;
 }
+
+
 
 @media (min-width: 992px) {
   #mainNav {
@@ -238,6 +237,18 @@ header.masthead .intro-text .intro-heading {
 
 }
 
+@media (min-width: 667px) {
+  #tiger{
+    width:35vw;
+  }
+  #water{
+    height: 20vh;
+  }
+  header.masthead .intro-text {
+    padding-top: 13vw;
+  }
+}
+
 @media (min-width: 768px) {
 
   header.masthead{
@@ -274,6 +285,8 @@ header.masthead .intro-text .intro-heading {
     height: 35vh;
   }
 }
+
+
 
 .service-heading {
   margin: 15px 0;
