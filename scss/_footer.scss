@@ -1,43 +1,68 @@
+$redColor: rgba(244,67,54,1);
+$blueColor: rgba(33,150,243,1);
 // Styling for the footer
+
 footer {
   padding: 25px 0;
   text-align: center;
-  span.copyright {
-    font-size: 90%;
-    line-height: 40px;
-    text-transform: none;
-    @include heading-font;
-  }
-  ul.quicklinks {
-    font-size: 90%;
-    line-height: 40px;
-    margin-bottom: 0;
-    text-transform: none;
-    @include heading-font;
-  }
 }
 
-ul.social-buttons {
-  margin-bottom: 0;
-  li {
-    a {
-      font-size: 20px;
-      line-height: 40px;
-      display: block;
-      width: 40px;
-      height: 40px;
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      transition: all 0.3s;
-      color: white;
-      border-radius: 100%;
-      outline: none;
-      background-color: $gray-900;
-      &:active,
-      &:focus,
-      &:hover {
-        background-color: $primary;
-      }
-    }
+.fa-4x {
+  font-size: 3em;
+  margin-right: 10px;
+}
+
+.flex-center {
+  position: fixed;
+  bottom: 0;
+  min-height: 10%;
+  width: 100%;
+  z-index: 2000;
+  max-width: 1440px;
+  background: #000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.icon-3d {
+  padding: 10px;
+  -webkit-animation: icon3d 200ms 10;
+  animation: icon3d 200ms 10;
+  color: #fff;
+
+  &:hover {
+    -webkit-animation: icon3d 200ms infinite;
+    animation: icon3d 200ms infinite;
+  }
+}
+@keyframes icon3d {
+  0% {
+    text-shadow: 5px 4px $redColor, -5px -6px $blueColor;
+  }
+
+  25% {
+    text-shadow: -5px -6px $redColor, 5px 4px $blueColor;
+  }
+
+  50% {
+    text-shadow: 5px -4px $redColor, -8px 4px $blueColor;
+  }
+
+  75% {
+    text-shadow: -8px -4px $redColor, -5px -4px $blueColor;
+  }
+
+  100% {
+    text-shadow: -5px 0 $redColor, 5px -4px $blueColor;
   }
 }
