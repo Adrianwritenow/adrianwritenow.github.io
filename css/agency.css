@@ -369,6 +369,18 @@ header.masthead .intro-text .intro-heading {
   z-index: 2;
 }
 
+#skills{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+}
+#skills li img {
+    width: 15vh;
+    margin-right: 30px;
+    margin-left: 15px;
+}
+
 @media (min-width: 767px) {
   #portfolio .portfolio-item {
     margin: 0 0 30px;
