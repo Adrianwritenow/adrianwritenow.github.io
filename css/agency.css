@@ -79,7 +79,8 @@ section h3.section-subheading {
 }
 
 .btn-primary:active, .btn-primary:focus {
-  box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
 }
 
 ::-moz-selection {
@@ -90,6 +91,10 @@ section h3.section-subheading {
 ::selection {
   background: #fed136;
   text-shadow: none;
+}
+
+img::-moz-selection {
+  background: transparent;
 }
 
 img::selection {
@@ -146,7 +151,6 @@ img::-moz-selection {
     padding-top: 25px;
     padding-bottom: 25px;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
-    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
     background-color: transparent;
@@ -154,7 +158,6 @@ img::-moz-selection {
   #mainNav .navbar-brand {
     font-size: 1.75em;
     -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
     transition: all 0.3s;
 
   }
@@ -183,9 +186,6 @@ header.masthead {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   padding-bottom: 20px;
   height: 100vh;
@@ -195,16 +195,23 @@ header.masthead {
 }
 
 .splashGraphic{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 35vh;
 }
 
 #water{
   width: 100vw;
   height: 10vh;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
   z-index: -2;
   border: 3vw solid red;
@@ -315,7 +322,6 @@ header.masthead .intro-text .intro-heading {
   width: 100%;
   height: 100%;
   -webkit-transition: all ease 0.5s;
-  -moz-transition: all ease 0.5s;
   transition: all ease 0.5s;
   opacity: 0;
   background: rgba(254, 209, 54, 0.9);
@@ -370,10 +376,14 @@ header.masthead .intro-text .intro-heading {
 }
 
 #skills{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 #skills li img {
     width: 15vh;
@@ -452,7 +462,6 @@ header.masthead .intro-text .intro-heading {
   margin-left: 35px;
   /* IE 9 */
   -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   background-color: #212529;
 }
@@ -464,7 +473,6 @@ header.masthead .intro-text .intro-heading {
   height: 75px;
   /* IE 9 */
   -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
   background-color: #212529;
 }
@@ -706,7 +714,8 @@ section#contact .form-group textarea.form-control {
 
 section#contact .form-control:focus {
   border-color: #fed136;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 section#contact ::-webkit-input-placeholder {
@@ -757,15 +766,12 @@ footer {
   max-width: 1440px;
   background: #000;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
 }
@@ -781,6 +787,28 @@ footer {
     -webkit-animation: icon3d 200ms infinite;
     animation: icon3d 200ms infinite;
   }
+
+@-webkit-keyframes icon3d {
+  0% {
+    text-shadow: 5px 4px var(--redColor), -5px -6px var(--blueColor);
+  }
+
+  25% {
+    text-shadow: -5px -6px var(--redColor), 5px 4px var(--blueColor);
+  }
+
+  50% {
+    text-shadow: 5px -4px var(--redColor), -8px 4px var(--blueColor);
+  }
+
+  75% {
+    text-shadow: -8px -4px var(--redColor), -5px -4px var(--blueColor);
+  }
+
+  100% {
+    text-shadow: -5px 0 var(--redColor), 5px -4px var(--blueColor);
+  }
+}
 
 @keyframes icon3d {
   0% {
@@ -802,4 +830,5 @@ footer {
   100% {
     text-shadow: -5px 0 var(--redColor), 5px -4px var(--blueColor);
   }
+}
 }

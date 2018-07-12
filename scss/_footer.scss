@@ -20,15 +20,12 @@ footer {
   z-index: 2000;
   background: #000;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
 }
@@ -42,6 +39,27 @@ footer {
   &:hover {
     -webkit-animation: icon3d 200ms infinite;
     animation: icon3d 200ms infinite;
+  }
+}
+@-webkit-keyframes icon3d {
+  0% {
+    text-shadow: 5px 4px $redColor, -5px -6px $blueColor;
+  }
+
+  25% {
+    text-shadow: -5px -6px $redColor, 5px 4px $blueColor;
+  }
+
+  50% {
+    text-shadow: 5px -4px $redColor, -8px 4px $blueColor;
+  }
+
+  75% {
+    text-shadow: -8px -4px $redColor, -5px -4px $blueColor;
+  }
+
+  100% {
+    text-shadow: -5px 0 $redColor, 5px -4px $blueColor;
   }
 }
 @keyframes icon3d {
